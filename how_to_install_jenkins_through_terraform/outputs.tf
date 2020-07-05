@@ -1,3 +1,3 @@
 output "publicip" {
-    value = "${aws_instance.beginnerseriesec2.public_ip}"
+    value = "${aws_instance.jenkins.public_ip}"
 }
