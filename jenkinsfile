@@ -33,7 +33,7 @@ pipeline {
 
         stage('Plan') {
             steps {
-                sh 'pwd;cd cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform init -input=false'
+                sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform init -input=false'
                 sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform workspace new ${environment}'
                 sh '/var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform workspace select ${environment}'
                 sh "pwd;/var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform plan -input=false -out tfplan "
