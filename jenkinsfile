@@ -14,16 +14,9 @@ pipeline {
 
    agent  any
         stages {
-        stage('Example') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        
         stage('checkout') {
             steps {
                  script{
-                        dir("terraform")
                         {
                             git "https://github.com/jagasworld/jagstechvideo.git"
                         }
