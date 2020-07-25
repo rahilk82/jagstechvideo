@@ -37,7 +37,7 @@ pipeline {
                 sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform workspace new ${environment}'
                 sh '/var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform workspace select ${environment}'
                 sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform plan -input=false -out tfplan'
-                sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform show -no-color tfplan > tfplan.txt'
+                sh 'cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform show -no-color tfplan > tfplan.txt'
             }
         }
         stage('Approval') {
