@@ -16,7 +16,7 @@ pipeline {
         stages {
         stage('checkout') {
             steps {
-                 script{
+                 script
                         {
                             git "https://github.com/jagasworld/jagstechvideo.git"
                         }
