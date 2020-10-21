@@ -1,4 +1,4 @@
-# https://github.com/easyawslearn/Terraform-Tutorial/blob/master/aws-instance-first-script/Jenkinsfile
+// https://github.com/easyawslearn/Terraform-Tutorial/blob/master/aws-instance-first-script/Jenkinsfile
 pipeline {
 
     parameters {
