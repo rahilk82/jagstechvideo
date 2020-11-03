@@ -2,6 +2,8 @@ provider "aws" {
     region = var.region
 }
 
+resource "aws_security_group" "ec2_public_security_group" {
+  name        = "EC2-Public-SG"
   description = "Internet reaching access for EC2 Instances"
   vpc_id      = "vpc-f434748e"
 
