@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout SCM') {
+    stage('Checkout_SCM') {
       steps {
-        sh 'git "https://github.com/jagasworld/jagstechvideo.git"'
+        git(url: 'https://github.com/jagasworld/jagstechvideo.git', branch: 'master')
       }
     }
 
