@@ -8,4 +8,8 @@ pipeline {
     }
 
   }
+  environment {
+    AWS_ACCESS_ID = 'AWS_ACCESS_IDN'
+    AWS_SECRET_ID = 'AWS_SECRET_IDN'
+  }
 }
