@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('Checkout_SCM') {
       steps {
-        script
-                        {
-                            git "https://github.com/jagasworld/jagstechvideo.git"
-                        }
+        script {
+          git "https://github.com/jagasworld/jagstechvideo.git"
+        }
+
       }
     }
 
