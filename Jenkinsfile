@@ -9,7 +9,7 @@ pipeline {
 
     stage('TF Plan') {
       steps {
-        sh '\'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform init -input=false\''
+        sh '\'pwd;cd /var/lib/jenkins/jobs/my_first_jenkinsfile_pipeline_job/ ; terraform init -input=false\''
       }
     }
 
