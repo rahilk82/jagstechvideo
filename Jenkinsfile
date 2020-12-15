@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Checkout_SCM') {
       steps {
-        git(url: 'https://github.com/jagasworld/jagstechvideo.git', branch: 'master')
+        script
+                        {
+                            git "https://github.com/jagasworld/jagstechvideo.git"
+                        }
       }
     }
 
