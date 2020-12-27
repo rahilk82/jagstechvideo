@@ -1,16 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout_SCM') {
-      parallel {
         stage('Checkout_SCM') {
-          steps {
-            script {
-              git "https://github.com/jagasworld/jagstechvideo.git"
-            }
-
-          }
-        }
+            steps {
+                 script
+                        {
+                            git "https://github.com/jagasworld/jagstechvideo.git"
+                        }
+                    }
+                }
 
         stage('Approval') {
           steps {
