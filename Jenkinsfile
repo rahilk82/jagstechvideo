@@ -11,13 +11,11 @@ pipeline {
                 }
 
         stage('Approval') {
-          steps {
-            input(message: 'You want to deploy it ?', ok: 'yes')
-          }
-        }
-
-      }
-    }
+           when {
+               not {
+                   equals expected: true, actual: params.autoApprove
+               }
+           }
 
     stage('TF Plan') {
       steps {
