@@ -17,11 +17,11 @@ pipeline {
                }
            }
 
-    stage('TF Plan') {
-      steps {
-        sh 'echo hostname'
-      }
-    }
+          steps {
+               script {
+                    echo hostname
+               }
+           }
+       }
   }
- }
 }
