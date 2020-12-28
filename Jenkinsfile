@@ -30,7 +30,7 @@ pipeline {
 
         stage('csac') {
           steps {
-            input(")
+            input(messgae: 'deploy?', propagate: true)
           }
         }
 
