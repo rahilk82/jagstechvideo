@@ -30,7 +30,8 @@ pipeline {
 
         stage('csac') {
           steps {
-            input(message: 'deploy'. submitter: 'admin')
+            #input(message: 'deploy'. submitter: 'admin')
+            input(")
           }
         }
 
