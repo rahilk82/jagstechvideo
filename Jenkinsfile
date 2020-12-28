@@ -30,7 +30,7 @@ pipeline {
 
         stage('csac') {
           steps {
-            input(message: 'sxsa', id: 'ascdas', ok: 'ascasc', submitter: 'acsac', submitterParameter: 'acac')
+            input(message: 'deploy'. submitter: 'admin')
           }
         }
 
