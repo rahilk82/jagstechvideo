@@ -11,3 +11,5 @@ variable "vpc_cidr" {
 variable "machines" {
     default = 1 
   }
+
+variable "ec2_subnet_ids" { default = [ "subnet-fbdf66da", "subnet-84de61db" ] }
