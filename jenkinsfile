@@ -30,6 +30,7 @@ pipeline {
 
         stage('Plan') {
             steps {
+                sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform taint aws_instance.jenkinstest'
                 sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform init -input=false'
                 sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform plan -input=false -out tfplan'
                 sh 'cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform show -no-color tfplan > tfplan.txt'
