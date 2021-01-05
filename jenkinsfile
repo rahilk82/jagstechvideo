@@ -8,10 +8,10 @@ pipeline {
     }
 
 
-//     environment {
-//        AWS_ACCESS_ID = credentials('AWS_ACCESS_IDN')
-//        AWS_SECRET_ID = credentials('AWS_SECRET_IDN')
-//    }
+     environment {
+        AWS_ACCESS_ID = credentials('AWS_ACCESS_IDN')
+        AWS_SECRET_ID = credentials('AWS_SECRET_IDN')
+    }
 
    agent  any
         options {
@@ -30,10 +30,9 @@ pipeline {
 
         stage('Plan') {
             steps {
-//                sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform init -input=false'
-//                sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform plan -input=false -out tfplan'
-//                sh 'cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform show -no-color tfplan > tfplan.txt'
-                  sh 'hostname'
+                sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ; terraform init -input=false'
+                sh 'pwd;cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform plan -input=false -out tfplan'
+                sh 'cd /var/lib/jenkins/workspace/Sandbox/PL_Sandbox_Pipeline_JOB ;terraform show -no-color tfplan > tfplan.txt'
             }
         }
         stage('Approval') {
