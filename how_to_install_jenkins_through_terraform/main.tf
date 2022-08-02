@@ -43,6 +43,8 @@ resource "aws_instance" "jenkins" {
       sudo apt update
       sudo apt install -y jenkins 
       sudo systemctl start jenkins
+      sudo apt-get update
+      sudo apt install python3.8
       EOF
     tags = {
       Name = "HelloWorld",
